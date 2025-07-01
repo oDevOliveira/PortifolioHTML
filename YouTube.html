@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Clone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      color: red;
+      font-size: 24px;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin: 0 16px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    nav {
+      width: 200px;
+      background-color: #fff;
+      border-right: 1px solid #ccc;
+      padding: 10px;
+      height: 100vh;
+      position: sticky;
+      top: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav li {
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    .main {
+      flex: 1;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .video {
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .video img {
+      width: 100%;
+      display: block;
+    }
+
+    .video-details {
+      padding: 10px;
+    }
+
+    .video-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .channel-name {
+      color: gray;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>YouTube</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquisar...">
+    </div>
+  </header>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li>Início</li>
+        <li>Em alta</li>
+        <li>Inscrições</li>
+        <li>Biblioteca</li>
+      </ul>
+    </nav>
+
+    <main class="main" id="videoContainer">
+      <!-- Vídeos fictícios serão inseridos por JS -->
+    </main>
+  </div>
+
+  <script>
+    const videos = [
+      {
+        title: "Explorando o Universo Pixelado",
+        channel: "8Bit Mundo",
+        thumbnail: "https://images.unsplash.com/photo-1611930021473-dc87df93b98e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Criando Cidades Futuristas com Blocos",
+        channel: "BuildLab",
+        thumbnail: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Simulador de Estações Espaciais",
+        channel: "Galáxia Tech",
+        thumbnail: "https://images.unsplash.com/photo-1616401789164-57ca8d9fca80?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Pintando com Códigos",
+        channel: "Arte & Algoritmos",
+        thumbnail: "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Aventuras no Mundo Subaquático",
+        channel: "AquaPlay",
+        thumbnail: "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Treinando Robôs com IA",
+        channel: "CodeLab AI",
+        thumbnail: "https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80"
+      }
+    ];
+
+    const container = document.getElementById('videoContainer');
+
+    videos.forEach(video => {
+      const div = document.createElement('div');
+      div.className = 'video';
+      div.innerHTML = `
+        <img src="${video.thumbnail}" alt="Thumb do vídeo" />
+        <div class="video-details">
+          <div class="video-title">${video.title}</div>
+          <div class="channel-name">${video.channel}</div>
+        </div>
+      `;
+      div.addEventListener('click', () => {
+        alert(`Você clicou em: "${video.title}" do canal ${video.channel}`);
+      });
+      container.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>
