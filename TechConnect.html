@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechConnect - Conectando Tecnologia</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #0f172a, #1e293b);
+      color: #f1f5f9;
+    }
+
+    header {
+      padding: 30px;
+      text-align: center;
+      background-color: #0ea5e9;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #38bdf8;
+    }
+
+    .about p {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 20px auto;
+      color: #cbd5e1;
+    }
+
+    .about img {
+      display: block;
+      margin: 40px auto 0;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .member {
+      background-color: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.2s ease, background 0.2s ease;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .member:hover {
+      transform: scale(1.03);
+      background-color: #334155;
+    }
+
+    .member h3 {
+      margin: 10px 0 6px;
+      color: #7dd3fc;
+    }
+
+    .member p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .services {
+      text-align: center;
+      font-size: 17px;
+      color: #cbd5e1;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .services li {
+      margin: 8px 0;
+    }
+
+    .services img {
+      display: block;
+      margin: 40px auto 0;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      background-color: #0ea5e9;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TechConnect</h1>
+    <p>Conectando você ao futuro da tecnologia</p>
+  </header>
+
+  <section class="section about">
+    <h2>Quem Somos</h2>
+    <p>
+      A <strong>TechConnect</strong> é uma empresa de tecnologia moderna, especializada em integração de hardware e desenvolvimento de soluções digitais. Nosso foco está na inovação e na experiência do cliente, oferecendo serviços personalizados para empresas e pessoas físicas.
+    </p>
+    <p>
+      A empresa foi idealizada por <strong>Filipe Oliveira</strong>, um estudante real de tecnologia, que lidera essa apresentação com o objetivo de demonstrar habilidades em desenvolvimento web. Os demais membros do time são fictícios e compõem um exemplo de equipe técnica.
+    </p>
+    <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80" alt="Imagem TechConnect">
+  </section>
+
+  <section class="section">
+    <h2>Equipe</h2>
+    <div class="team-grid">
+      <div class="member">
+        <h3>Filipe Oliveira</h3>
+        <p>Fundador e Engenheiro de Software</p>
+        <p><em>(Estudante real)</em></p>
+      </div>
+      <div class="member">
+        <h3>Sofia Andrade</h3>
+        <p>Diretora de Operações</p>
+      </div>
+      <div class="member">
+        <h3>Rafael Costa</h3>
+        <p>Analista de Segurança da Informação</p>
+      </div>
+      <div class="member">
+        <h3>Beatriz Nunes</h3>
+        <p>Gerente de Produto</p>
+      </div>
+      <div class="member">
+        <h3>Eduardo Lima</h3>
+        <p>Desenvolvedor Front-end</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services">
+    <h2>Serviços Oferecidos</h2>
+    <ul>
+      <li>🔧 Manutenção e otimização de hardware</li>
+      <li>🖥️ Desenvolvimento de sites e sistemas</li>
+      <li>🔐 Segurança e infraestrutura de redes</li>
+      <li>📡 Instalação e configuração de servidores</li>
+      <li>💼 Consultoria em soluções tecnológicas</li>
+    </ul>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsMahNQGcCKUaQ2HbryybBVZfYxXjjXsKZPQEShCbQgnLLZy_4jI8lg7Bb&s=10" alt="Serviços TechConnect">
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TechConnect. Todos os direitos reservados.</p>
+    <p>Site institucional desenvolvido por Filipe Oliveira.</p>
+  </footer>
+
+</body>
+</html>
